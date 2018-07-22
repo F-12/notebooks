@@ -2,4 +2,4 @@
 
 描述参见: [README](README.ipynb)
 
-Site：[Site](/F-12/notebooks)
+Site：[Site](https://f-12.github.io/notebooks/)
