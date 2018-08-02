@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>构建布局测试 slides</title>
+<title>README slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -36,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11776,7 +11776,6 @@ ul.typeahead-list > li > a {
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
   font-size: 160%;
-  overflow-y: scroll;
 }
 .reveal pre {
   width: inherit;
@@ -11806,6 +11805,41 @@ ul.typeahead-list > li > a {
 }
 .reveal .progress {
   position: static;
+}
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #727272;
+}
+.reveal .controls .navigate-left.enabled:hover,
+.reveal .controls .navigate-left.enabled.enabled:hover {
+  border-right-color: #dfdfdf;
+}
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #727272;
+}
+.reveal .controls .navigate-right.enabled:hover,
+.reveal .controls .navigate-right.enabled.enabled:hover {
+  border-left-color: #dfdfdf;
+}
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #727272;
+}
+.reveal .controls .navigate-up.enabled:hover,
+.reveal .controls .navigate-up.enabled.enabled:hover {
+  border-bottom-color: #dfdfdf;
+}
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #727272;
+}
+.reveal .controls .navigate-down.enabled:hover,
+.reveal .controls .navigate-down.enabled.enabled:hover {
+  border-top-color: #dfdfdf;
+}
+.reveal .progress span {
+  background: #727272;
 }
 div.input_area {
   padding: 0.06em;
@@ -11840,6 +11874,19 @@ a.anchor-link {
 .rendered_html p {
   text-align: inherit;
 }
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar *
+{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #727272 !important;
+}
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
@@ -11854,32 +11901,622 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="First">First<a class="anchor-link" href="#First">&#182;</a></h1><p>First slide</p>
+<p><img src="README/smily_face_2-wallpaper-2560x1600.jpg" alt="cover"></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Second">Second<a class="anchor-link" href="#Second">&#182;</a></h1><p>Second slide</p>
+<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#概述" data-toc-modified-id="概述-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>概述</a></span></li><li><span><a href="#写作环境" data-toc-modified-id="写作环境-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>写作环境</a></span><ul class="toc-item"><li><span><a href="#notebook基础" data-toc-modified-id="notebook基础-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>notebook基础</a></span></li><li><span><a href="#notebook扩展" data-toc-modified-id="notebook扩展-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>notebook扩展</a></span></li></ul></li><li><span><a href="#notebook规范" data-toc-modified-id="notebook规范-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>notebook规范</a></span><ul class="toc-item"><li><span><a href="#组织" data-toc-modified-id="组织-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>组织</a></span></li><li><span><a href="#资源" data-toc-modified-id="资源-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>资源</a></span></li><li><span><a href="#目录" data-toc-modified-id="目录-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>目录</a></span></li><li><span><a href="#章节" data-toc-modified-id="章节-3.4"><span class="toc-item-num">3.4&nbsp;&nbsp;</span>章节</a></span></li><li><span><a href="#引用" data-toc-modified-id="引用-3.5"><span class="toc-item-num">3.5&nbsp;&nbsp;</span>引用</a></span></li></ul></li><li><span><a href="#元素" data-toc-modified-id="元素-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>元素</a></span><ul class="toc-item"><li><span><a href="#图片资源" data-toc-modified-id="图片资源-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>图片资源</a></span></li><li><span><a href="#代码" data-toc-modified-id="代码-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>代码</a></span><ul class="toc-item"><li><span><a href="#Python代码" data-toc-modified-id="Python代码-4.2.1"><span class="toc-item-num">4.2.1&nbsp;&nbsp;</span>Python代码</a></span></li><li><span><a href="#node.js代码" data-toc-modified-id="node.js代码-4.2.2"><span class="toc-item-num">4.2.2&nbsp;&nbsp;</span>node.js代码</a></span></li></ul></li></ul></li><li><span><a href="#展示" data-toc-modified-id="展示-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>展示</a></span><ul class="toc-item"><li><span><a href="#Slides视图" data-toc-modified-id="Slides视图-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Slides视图</a></span></li><li><span><a href="#静态Slides" data-toc-modified-id="静态Slides-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>静态Slides</a></span></li><li><span><a href="#自定义" data-toc-modified-id="自定义-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>自定义</a></span></li></ul></li><li><span><a href="#发布" data-toc-modified-id="发布-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>发布</a></span><ul class="toc-item"><li><span><a href="#发布到Github" data-toc-modified-id="发布到Github-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>发布到Github</a></span></li><li><span><a href="#发布到Github-Pages" data-toc-modified-id="发布到Github-Pages-6.2"><span class="toc-item-num">6.2&nbsp;&nbsp;</span>发布到Github Pages</a></span></li><li><span><a href="#发布文章" data-toc-modified-id="发布文章-6.3"><span class="toc-item-num">6.3&nbsp;&nbsp;</span>发布文章</a></span></li><li><span><a href="#发布Slides" data-toc-modified-id="发布Slides-6.4"><span class="toc-item-num">6.4&nbsp;&nbsp;</span>发布Slides</a></span></li></ul></li></ul></div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#27010;&#36848;">&#27010;&#36848;<a class="anchor-link" href="#&#27010;&#36848;">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这个仓库用来实践使用jupyter notebook作为写作平台的方法。<br>
+本文用来描述实践过程中总结的完整方法体系。<br>
+具体内容包括写作环境的搭建及配置、博客写作规范、各类元素的使用方法、将文章转换成展示用的slide方法、部署写作平台的方法等。</p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Third">Third<a class="anchor-link" href="#Third">&#182;</a></h1><p>Third slide</p>
+<h1 id="&#20889;&#20316;&#29615;&#22659;">&#20889;&#20316;&#29615;&#22659;<a class="anchor-link" href="#&#20889;&#20316;&#29615;&#22659;">&#182;</a></h1><ul>
+<li><a href="https://jupyter-notebook.readthedocs.io/en/stable/">jupyter notebook</a></li>
+<li><a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions">ipython-contrib/jupyter_contrib_nbextensions</a></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="notebook&#22522;&#30784;">notebook&#22522;&#30784;<a class="anchor-link" href="#notebook&#22522;&#30784;">&#182;</a></h2><p>参考<a href="https://jupyter.readthedocs.io/en/latest/install.html#install">installation guide</a>进行安装。<br>
+<a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#introduction">这里</a>介绍了notebook的基本情况。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="notebook&#25193;&#23637;">notebook&#25193;&#23637;<a class="anchor-link" href="#notebook&#25193;&#23637;">&#182;</a></h2><p>参考<a href="http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">这里</a>安装jupyter_contrib_nbextensions。<br>
+安装时主要包括如下三步：</p>
+<ul>
+<li>安装packages</li>
+<li>安装js和css文件</li>
+<li>重启jupyter</li>
+</ul>
+<p>安装结束后，访问</p>
+
+<pre><code>http://localhost:8000/nbextensions</code></pre>
+<p>进入扩展管理后台。<br>
+<a href="http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html">这里</a>介绍了包含的扩展的具体信息。</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="notebook&#35268;&#33539;">notebook&#35268;&#33539;<a class="anchor-link" href="#notebook&#35268;&#33539;">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#32452;&#32455;">&#32452;&#32455;<a class="anchor-link" href="#&#32452;&#32455;">&#182;</a></h2><p>除<a href="README.ipynb">README.ipynb</a>和<a href="index.ipynb">index.ipynb</a>外，其他notebook必须存放与ipynb中。<br>
+根据notebook生成的html渲染版本和slides渲染版本存放于generated目录下。<br>
+ipynb可以根据分类创建子目录进行组织，同时generated目录需要与ipynb目录保持结构的镜像关系。<br>
+generated目录下的每个子目录中可以使用软连接引用仓库根目录下的reveal.js，保证该子目录下的slides版本可以使用。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36164;&#28304;">&#36164;&#28304;<a class="anchor-link" href="#&#36164;&#28304;">&#182;</a></h2><p>一个文章以一个notebook的形式表现。<br>
+文件系统中创建一个和notebook同名的目录，用来管理notebook中使用的资源。<br>
+文章中只使用相对路径引用此目录下的资源。<br>
+禁止使用绝对路径引用文件系统中的资源。<br>
+减少使用绝对路径引用网络资源，避免一段时间后资源不存在的情况。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#30446;&#24405;">&#30446;&#24405;<a class="anchor-link" href="#&#30446;&#24405;">&#182;</a></h2><p>每个notebook都在开始部分插入一个目录的Cell，方便读者了解文章的大纲。<br>
+文章的目录可以使用Table of Contents扩展生成。<br>
+<img src="README/table_of_contents_extension.png" alt="Table of Contents Extension"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#31456;&#33410;">&#31456;&#33410;<a class="anchor-link" href="#&#31456;&#33410;">&#182;</a></h2><p>每个章节使用独立的cell。这样编辑时可以做到相对独立编辑特定cell，保持其他cell的渲染状态。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24341;&#29992;">&#24341;&#29992;<a class="anchor-link" href="#&#24341;&#29992;">&#182;</a></h2><p>notebook中使用到的引用到的外部资源需要创建独立cell进行标注。</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#20803;&#32032;">&#20803;&#32032;<a class="anchor-link" href="#&#20803;&#32032;">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22270;&#29255;&#36164;&#28304;">&#22270;&#29255;&#36164;&#28304;<a class="anchor-link" href="#&#22270;&#29255;&#36164;&#28304;">&#182;</a></h2><p>Markdown cell中使用图片引用语法<code>![Alt Text](Image Path)</code>。这种方法引用的图片可以直接渲染在结果文档中。可以参考本文的封面图。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20195;&#30721;">&#20195;&#30721;<a class="anchor-link" href="#&#20195;&#30721;">&#182;</a></h2><p>演示类代码一般需要包含源码和源码执行结果。这个是jupyter notebooks的强项。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Python&#20195;&#30721;">Python&#20195;&#30721;<a class="anchor-link" href="#Python&#20195;&#30721;">&#182;</a></h3>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">import</span> <span class="nx">matplotlib</span><span class="p">.</span><span class="nx">pylab</span> <span class="nx">as</span> <span class="nx">plt</span>
+<span class="kr">import</span> <span class="nx">numpy</span> <span class="nx">as</span> <span class="nx">np</span>
+<span class="nx">x</span> <span class="o">=</span> <span class="nx">np</span><span class="p">.</span><span class="nx">linspace</span><span class="p">(</span><span class="o">-</span><span class="nx">np</span><span class="p">.</span><span class="nx">pi</span><span class="p">,</span> <span class="nx">np</span><span class="p">.</span><span class="nx">pi</span><span class="p">,</span> <span class="mi">201</span><span class="p">)</span>
+<span class="nx">plt</span><span class="p">.</span><span class="nx">plot</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">np</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span>
+<span class="nx">plt</span><span class="p">.</span><span class="nx">xlabel</span><span class="p">(</span><span class="s1">&#39;Angle [rad]&#39;</span><span class="p">)</span>
+<span class="nx">plt</span><span class="p">.</span><span class="nx">ylabel</span><span class="p">(</span><span class="s1">&#39;sin(x)&#39;</span><span class="p">)</span>
+<span class="nx">plt</span><span class="p">.</span><span class="nx">axis</span><span class="p">(</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+<span class="nx">plt</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="node.js&#20195;&#30721;">node.js&#20195;&#30721;<a class="anchor-link" href="#node.js&#20195;&#30721;">&#182;</a></h3>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+<span class="nx">fs</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="s1">&#39;./README.ipynb&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stat</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stat</span><span class="p">);</span>
+<span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>undefined</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{ dev: 16777221,
+  mode: 33188,
+  nlink: 1,
+  uid: 501,
+  gid: 20,
+  rdev: 0,
+  blksize: 4194304,
+  ino: 8616215030,
+  size: 31144,
+  blocks: 64,
+  atime: 2018-07-21T16:33:04.118Z,
+  mtime: 2018-07-21T16:32:50.871Z,
+  ctime: 2018-07-21T16:32:50.871Z,
+  birthtime: 2018-07-20T04:38:08.808Z }
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#23637;&#31034;">&#23637;&#31034;<a class="anchor-link" href="#&#23637;&#31034;">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Slides&#35270;&#22270;">Slides&#35270;&#22270;<a class="anchor-link" href="#Slides&#35270;&#22270;">&#182;</a></h2><p>使用jupyter notebook可以很方便的生成演示用的slides。<br>
+参考<a href="https://damianavila.github.io/RISE/installation.html">这里</a>安装RISE扩展。<br>
+安装完成后重启jupyter。<br>
+重新打开jupyter notebook后，可以在工具栏上看到对应按钮：<br>
+<img src="README/view_as_slide_button.png" alt="view as slide"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38745;&#24577;Slides">&#38745;&#24577;Slides<a class="anchor-link" href="#&#38745;&#24577;Slides">&#182;</a></h2><p>Slides视图提供的Slides版本是需要jupyter作为服务器进行host的。RISE提供的生成Slides的功能基于Reveal.js，使用下图所示菜单项<br>
+<img src="README/download_as_slides.png" alt="Download as Slides"><br>
+将notebook生成可以配合reveal.js使用的html文件。然后将此html文件放在reveal.js同级目录下，打开此html时即可使用生成的静态Slides。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#33258;&#23450;&#20041;">&#33258;&#23450;&#20041;<a class="anchor-link" href="#&#33258;&#23450;&#20041;">&#182;</a></h2><p>默认皮肤看腻了，可以使用<a href="https://damianavila.github.io/RISE/customize.html">RISE提供的方法</a>进行自定义。<br>
+目前RISE生成slides的工具有bug，自定义主题的背景色等都是不正确的。</p>
+<ul>
+<li>[ ] 进一步研究RISE生成原理</li>
+<li>[ ] Reveal.js的自定义配置</li>
+<li>[ ] notebook中如何配置Reveal.js</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#21457;&#24067;">&#21457;&#24067;<a class="anchor-link" href="#&#21457;&#24067;">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21457;&#24067;&#21040;Github">&#21457;&#24067;&#21040;Github<a class="anchor-link" href="#&#21457;&#24067;&#21040;Github">&#182;</a></h2><p>完成Commit后，直接push到github上对应的Repository，从github上打开对应的notebook时会自动渲染成最终结果。<br>
+如下图所示：<br>
+<img src="README/rendered_by_github.png" alt="Rendered By Github"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21457;&#24067;&#21040;Github-Pages">&#21457;&#24067;&#21040;Github Pages<a class="anchor-link" href="#&#21457;&#24067;&#21040;Github-Pages">&#182;</a></h2><p>使用github repository settings创建代码仓库的gitub pages。根目录下创建index.html作为站点的首页。创建结果参见<a href="index.html">这里</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21457;&#24067;&#25991;&#31456;">&#21457;&#24067;&#25991;&#31456;<a class="anchor-link" href="#&#21457;&#24067;&#25991;&#31456;">&#182;</a></h2><ul>
+<li>[ ] 构建静态文章的流程和工程布局</li>
+<li>[ ] 批量生成静态文章的脚本工具</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21457;&#24067;Slides">&#21457;&#24067;Slides<a class="anchor-link" href="#&#21457;&#24067;Slides">&#182;</a></h2><ul>
+<li>[ ] 构建Slides的流程和工程布局</li>
+<li>[ ] 批量生成静态Slides的脚本工具</li>
+<li>[ ] 接入新的自定义主题</li>
+<li>[ ] 文章和Slides的自动关联</li>
+</ul>
 
 </div>
 </div>
@@ -11908,8 +12545,7 @@ require(
             progress: true,
             history: true,
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+            transition: "slide",
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
@@ -11929,13 +12565,25 @@ require(
 
         Reveal.addEventListener('slidechanged', update);
 
-        var update_scroll = function(event){
-          $(".reveal").scrollTop(0);
-        };
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
 
-        Reveal.addEventListener('slidechanged', update_scroll);
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
 
     }
+
 );
 </script>
 
